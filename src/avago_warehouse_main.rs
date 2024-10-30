@@ -138,10 +138,10 @@ mod avago_warehouse_main {
 
             match mode.as_str() {
                 "withdraw" => {
-                    self.vnft.set_depositable(rule!(allow_all));
+                    self.vnft.set_withdrawable(rule!(allow_all));
                 }
                 "deposit" => {
-                    self.vnft.set_withdrawable(rule!(allow_all));
+                    self.vnft.set_depositable(rule!(allow_all));
                 }
                 _ => panic!("Invalid mode"),
             };
